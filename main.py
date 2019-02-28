@@ -33,7 +33,7 @@ if __name__ == '__main__':
     image_downloader()
 
     local_dir = os.path.abspath('.')
-    dbx_token = dropbox.Dropbox('p_EcLMnQMcAAAAAAAAAADZU38UTpLbhcrlgbFaMRgwKxGuDFwuNAV0wU-zplRNk6')
+    dbx_token = dropbox.Dropbox('YOUR_API_KEY')
 
     for file_name in os.listdir(local_dir):
 
@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
         local_path = os.path.abspath(file_name)
         relative_path = os.path.relpath(local_path, local_dir)
-        dropbox_path = os.path.join('/Apps/face_db_upload', relative_path)
+        dropbox_path = os.path.join('/Apps/ENTER_YOUR_FOLDER_NAME', relative_path)
 
         with open(local_path, 'rb') as f:
             try:
